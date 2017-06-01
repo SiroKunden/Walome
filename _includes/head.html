@@ -1,0 +1,50 @@
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Komiksové Noviny jsou pořadem o komiksových novinkách">
+    <meta name="author" content="Ondřej Šírek">
+
+    <meta property="og:url" content="http://komiksovenoviny.cz/" />
+    <meta property="og:title" content="KOMIKSOVÉ NOVINY" />
+    <meta property="og:description" content="Chce být v obraze ve světě komiksů? Tak chekuj tyhle týpky!" />
+    <meta property="og:image" content="http://komiksovenoviny.cz/img/logo.png" />
+    
+    <!-- Twitter Card--> 
+    <meta name="twitter:card" content="KOMIKSOVÉ NOVINY" /> 
+    <meta name="twitter:site" content="http://komiksovenoviny.cz/" /> 
+    <meta name="twitter:title" content="Chce být v obraze ve světě komiksů? Tak chekuj tyhle týpky!" /> 
+    <meta name="twitter:image" content="http://komiksovenoviny.cz/img/logo.png" />
+    
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ site.rewrite }}vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{{ site.rewrite }}css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ site.rewrite }}vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ site.rewrite }}vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="{{ site.rewrite }}vendor/device-mockups/device-mockups.min.css">
+
+    <!-- Custom CSS
+    <link rel="stylesheet" href="css/main.css" type="text/css"> -->
+    <link href="{{ site.rewrite }}css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css"/>
+    
+</head>

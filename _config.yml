@@ -1,0 +1,38 @@
+# Site settings
+title: Walome
+email: siro.kunden@gmail.com
+description: Má webová page pro moje hardcore fans.
+
+baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
+url: "" # the base hostname & protocol for your site
+
+#rewrite
+rewrite: /
+#rewrite: /Walome/
+
+google_analytics: 
+addthis_id: 
+disqus_account: 
+
+# Social networks usernames (many more available: flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.) see all icon at fontawesome.io
+social:
+  #- title: twitter
+  #  url: 
+  - title: facebook
+    url: https://www.facebook.com/WalomeYT
+  - title: youtube-play
+    url: https://www.youtube.com/channel/UC3wsOiRyuLHMtUhKBGFSAWw
+  #- title: google-plus
+  #  url: 
+  #- title: github
+  #  url: 
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
+# Build settings

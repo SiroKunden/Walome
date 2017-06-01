@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <script src="{{ site.rewrite }}js/jquery.js"></script>
+    <script src="{{ site.rewrite }}js/new-age.js"></script>
+    <script src="{{ site.rewrite }}js/comicsDB.js"></script>
+    
+    <script>
+        
+        $( document ).ready(function() {
+        
+            var comicsNum = 10;
+        
+            var added = 0;
+            var download = 0;
+            
+            downloadSourceOfHtml("https://crossorigin.me/https://comicsdb.cz/comicslist.php", "comicslist.php", function(source, url) {
+                var comics = source.match(/comics.php\?id=([0-9]+)/g);
+                
+                for(var i = comics.length - 1; i >= 0 && download < comicsNum; i--) {
+                    var find = search(comics[i], comicsDownloaded);
+                    if(find !== null) {
+                        comics.splice (i, 1);
+                    }
+                }
+                
+                if(comics.length < comicsNum) comicsNum = comics.length;
+                
+                for(var i = comics.length - 1; i >= 0 && download < comicsNum; i--) {
+                    
+                    var find = search(comics[i], comicsDownloaded);
+                    
+                    if(find === null) {
+                        
+                        download++;
+                    
+                        downloadSourceOfHtml("https://crossorigin.me/https://comicsdb.cz/" + comics[i], comics[i], function(comicsSource, comicsUrl) {
+                            comicsSource = comicsSource.replace(/(\r\n|\n|\r)/gm,"");
+
+                            var cover = comicsSource.substring(comicsSource.indexOf('data-title="Obálka"><img src="') + 30, comicsSource.indexOf('" alt="Obálka"'));
+                            var name = comicsSource.substring(comicsSource.indexOf('<H5>') + 4, comicsSource.indexOf('</H5>'));
+
+                            var match = comicsSource.match(/Vydal:((?!<br \/>).)*<br \/>/g);
+                            var publisher = match !== null && typeof(match) !== "undefined" && match.length > 0 ? match[0].substring(match[0].indexOf("</span>") + 7, match[0].indexOf("<br />")).trim() : "";
+                            publisher = publisher.replace(/<a((?!<\/).)*>/gm,"").replace(/<\/a>/gm,"");
+                            match = comicsSource.match(/Rok a měsíc vydání:((?!<br \/>).)*<br \/>/g);
+                            var publish = match !== null && typeof(match) !== "undefined" && match.length > 0 ? match[0].substring(match[0].indexOf("</span>") + 7, match[0].indexOf("<br />")).trim() : "";
+                            match = comicsSource.match(/Vazba:((?!<br \/>).)*<br \/>/g);
+                            var type = match !== null && typeof(match) !== "undefined" && match.length > 0 ? match[0].substring(match[0].indexOf("</span>") + 7, match[0].indexOf("<br />")).trim() : "";
+                            match = comicsSource.match(/Format:((?!<br \/>).)*<br \/>/g);
+                            var format = match !== null && typeof(match) !== "undefined" && match.length > 0 ? match[0].substring(match[0].indexOf("</span>") + 7, match[0].indexOf("<br />")).trim() : "";
+                            match = comicsSource.match(/Počet stran:((?!<br \/>).)*<br \/>/g);
+                            var pages = match !== null && typeof(match) !== "undefined" && match.length > 0 ? match[0].substring(match[0].indexOf("</span>") + 7, match[0].indexOf("<br />")).trim() : "";
+                            match = comicsSource.match(/Cena v době vydání:((?!<br \/>).)*<br \/>/g);
+                            var price = match !== null && typeof(match) !== "undefined" && match.length > 0 ? match[0].substring(match[0].indexOf("</span>") + 7, match[0].indexOf("<br />")).trim() : "";
+
+                            var comicsItem = {};
+                            comicsItem["url"] = comicsUrl;
+                            comicsItem["cover"] = cover;
+                            comicsItem["name"] = name;
+                            comicsItem["publisher"] = publisher;
+                            comicsItem["publish"] = publish;
+                            comicsItem["type"] = type;
+                            comicsItem["format"] = format;
+                            comicsItem["pages"] = pages;
+                            comicsItem["price"] = price;
+
+                            comicsDownloaded.unshift(comicsItem);
+
+                            added++;
+
+                            if(added == (comicsNum > -1 ? comicsNum : comics.length)) {
+                                $("body").text("var comicsDownloaded = " + JSON.stringify(comicsDownloaded));
+                            }
+
+                        });
+                        
+                    }   
+            
+                }
+                
+                if(download == 0) {
+                    $("body").text("Nothing to download.");
+                }
+                
+            });
+        
+        });
+        
+    </script>
+    
+<body id="page-top">
+</body>
+
+</html>
