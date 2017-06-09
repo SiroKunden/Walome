@@ -392,6 +392,12 @@ section {
             background-color: #b31217;
           }
         }
+        &.social-instagram a {
+          background-color: black;
+          &:hover {
+            background-color: black;
+          }
+        }
       }
     }
   }

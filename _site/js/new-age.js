@@ -30,6 +30,8 @@
     
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         $("#name-sufix").remove();
+        $("#image-prefix").attr("style", "");
+        $("#image-prefix").parent().addClass("text-center");
     }
     
 })(jQuery); // End of use strict

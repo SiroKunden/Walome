@@ -295,6 +295,10 @@ section {
         background-color: #e52d27; }
         section.contact ul.list-social li.social-youtube-play a:hover {
           background-color: #b31217; }
+      section.contact ul.list-social li.social-instagram a {
+        background-color: black; }
+        section.contact ul.list-social li.social-instagram a:hover {
+          background-color: black; }
 
 @media (min-width: 768px) {
   section.download .badges .badge-link {
