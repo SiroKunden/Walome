@@ -85,7 +85,7 @@ function parseDiCKK(response, table) {
         
             var comicsItems = item.description.substring(start, end).replace("Mluvím o komiksech:", "").split("\n");
         
-            for(var c = 0; c < comicsItems.length; c++) {
+            for(var c = comicsItems.length - 1; c >= 0; c--) {
             
                 if(comicsItems[c].length == 0) continue;
                 
