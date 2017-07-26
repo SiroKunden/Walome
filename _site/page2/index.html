@@ -47,8 +47,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.15/datatables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css"/>
+    <link href="/css/datatables.min.css" rel="stylesheet">
+    <link href="/css/responsive.dataTables.min.css" rel="stylesheet">
     
 </head>
 
@@ -138,6 +138,38 @@
     </div>
 </section>
 
+  <section id="vyslo" class="download bg-primary text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-heading">Walomeho DiCKK</h2>
+                <p>Komiksový komplet trochu jinak - s humorem, nadsázkou a Walomem</p>
+                <table id="dickk" class="display responsive nowrap" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Název</th>
+                            <th>comicsdb</th>
+                            <th>Náhled</th>
+                            <th>Youtube</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dickkBody"></tbody>
+                    <tfoot style="display: none;">
+                        <tr>
+                            <th>Název</th>
+                            <th>comicsdb</th>
+                            <th>Náhled</th>
+                            <th>Youtube</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
   
     <section id="bio" class="features">
         <div class="container">
@@ -221,7 +253,7 @@
             </li>
         
             <li class="social-instagram">
-                <a href="https://www.instagram.com/walomeyt/" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
+                <a href="https://www.instagram.com/walomeig/" class="btn-social btn-outline" target="_blank"><i class="fa fa-fw fa-instagram"></i></a>
             </li>
         
         </ul>
@@ -265,7 +297,13 @@
 <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="/js/jquery.easing.min.js"></script>
+
+<script src="/js/datatables.min.js"></script>
+<script src="/js/dataTables.bootstrap.min.js"></script>
+<script src="/js/dataTables.responsive.min.js"></script>
+
+<script src="/js/jquery.lazyload.min.js"></script>
 
 <!-- Theme JavaScript -->
 <script src="/js/new-age.js"></script>
