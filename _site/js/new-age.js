@@ -38,7 +38,7 @@ var playlistId = "PL_phu8k3RmzR8p1VmgZLoY1FJ4igmCrqg";
     
     $(document).ready(function(){
         
-        var t = $('#dickk').DataTable({
+        var t = $('#dickkTable').DataTable({
             responsive: true,
             "order": [[ 4, "desc" ]],
             "language": {

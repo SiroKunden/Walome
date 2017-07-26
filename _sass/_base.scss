@@ -685,8 +685,15 @@ td {
     padding: 0px !important;
 }
 
-.dataTables_wrapper .dataTables_filter {
-    color: white !important;
+table {
+    border: 1px solid $theme-primary !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: $theme-primary !important;
+    border-color: $theme-primary !important;
 }
 
 .child {

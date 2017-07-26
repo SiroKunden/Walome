@@ -498,8 +498,14 @@ td {
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   padding: 0px !important; }
 
-.dataTables_wrapper .dataTables_filter {
-  color: white !important; }
+table {
+  border: 1px solid #026831 !important;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+  background-color: #026831 !important;
+  border-color: #026831 !important; }
 
 .child {
   background-color: #ffffff !important; }
