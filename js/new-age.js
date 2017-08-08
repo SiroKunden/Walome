@@ -53,7 +53,7 @@ var playlistId = "PL_phu8k3RmzR8p1VmgZLoY1FJ4igmCrqg";
         var column = t.column(4);
         column.visible(! column.visible());
         
-        downloadSourceOfHtml("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + playlistId + "&key=AIzaSyANeJwlrDHnL1mfvTjjUhxDKU5AU6S9ysA", t);
+        downloadSourceOfHtml("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + playlistId + "&key=AIzaSyDuPBD7duBdgYcHEkLTWH1bIhoYrH3fvQU", t);
         
     });
     
