@@ -4,7 +4,7 @@ email: siro.kunden@gmail.com
 description: Má webová page pro moje hardcore fans.
 
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
-url: "" # the base hostname & protocol for your site
+url: "http://walome.cz" # the base hostname & protocol for your site
 
 #rewrite
 rewrite: /
@@ -36,5 +36,5 @@ permalink: pretty
 paginate: 5
 exclude: ["less","README.md"]
 
-gems: [jekyll-paginate, jekyll-feed]
+gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
 # Build settings
