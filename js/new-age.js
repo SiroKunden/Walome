@@ -102,7 +102,7 @@ function parseDiCKK(response, table) {
     
     if(typeof(source.nextPageToken) !== "undefined" && source.nextPageToken !== null) {
         
-        downloadSourceOfHtml("https://www.googleapis.com/youtube/v3/playlistItems?pageToken=" + source.nextPageToken + "&part=snippet&playlistId=" + playlistId + "&key=AIzaSyANeJwlrDHnL1mfvTjjUhxDKU5AU6S9ysA", table);
+        downloadSourceOfHtml("https://www.googleapis.com/youtube/v3/playlistItems?pageToken=" + source.nextPageToken + "&part=snippet&playlistId=" + playlistId + "&key=AIzaSyDuPBD7duBdgYcHEkLTWH1bIhoYrH3fvQU", table);
         
     }
     else {
