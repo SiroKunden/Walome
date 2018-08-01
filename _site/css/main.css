@@ -514,3 +514,8 @@ table {
   max-width: 200px !important;
   white-space: normal !important;
   word-wrap: break-word !important; }
+
+@media only screen and (min-width: 768px) {
+  .patreon-button > div {
+    width: 175px !important;
+    margin: 0 auto; } }
