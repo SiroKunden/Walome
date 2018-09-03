@@ -99,18 +99,18 @@ p {
         color: black; }
       .navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus:hover {
         color: black; }
-    .navbar-default.affix {
+    .navbar-default.affix, .navbar-default.permanent-white {
       background-color: white;
       border-color: rgba(34, 34, 34, 0.1); }
-      .navbar-default.affix .navbar-header .navbar-brand {
+      .navbar-default.affix .navbar-header .navbar-brand, .navbar-default.permanent-white .navbar-header .navbar-brand {
         color: #222222; }
-        .navbar-default.affix .navbar-header .navbar-brand:hover, .navbar-default.affix .navbar-header .navbar-brand:focus {
+        .navbar-default.affix .navbar-header .navbar-brand:hover, .navbar-default.affix .navbar-header .navbar-brand:focus, .navbar-default.permanent-white .navbar-header .navbar-brand:hover, .navbar-default.permanent-white .navbar-header .navbar-brand:focus {
           color: #026831; }
-      .navbar-default.affix .nav > li > a {
+      .navbar-default.affix .nav > li > a, .navbar-default.permanent-white .nav > li > a {
         color: black; }
-        .navbar-default.affix .nav > li > a:focus {
+        .navbar-default.affix .nav > li > a:focus, .navbar-default.permanent-white .nav > li > a:focus {
           color: black; }
-        .navbar-default.affix .nav > li > a:hover, .navbar-default.affix .nav > li > a:focus:hover {
+        .navbar-default.affix .nav > li > a:hover, .navbar-default.affix .nav > li > a:focus:hover, .navbar-default.permanent-white .nav > li > a:hover, .navbar-default.permanent-white .nav > li > a:focus:hover {
           color: black; } }
 header {
   position: relative;
@@ -213,6 +213,8 @@ section {
       background: linear-gradient(to left, #7b4397, #dc2430);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
+  section.cta-back {
+    background-image: url("../img/bg-cta-new.jpg"); }
   section.cta {
     position: relative;
     -webkit-background-size: cover;
@@ -220,7 +222,6 @@ section {
     background-size: cover;
     -o-background-size: cover;
     background-position: center;
-    background-image: url("../img/bg-cta-new.jpg");
     padding: 100px 0; }
     section.cta .cta-content {
       position: relative;
@@ -520,7 +521,7 @@ table {
     width: 175px !important;
     margin: 0 auto; } }
 @media only screen and (max-width: 768px) {
-  section.cta {
+  section.cta-back {
     background-image: url("../img/bg-cta-mobile-new.jpg");
     height: 200px; } }
 .google-maps {

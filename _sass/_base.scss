@@ -129,7 +129,7 @@ p {
         color: black;
       }
     }
-    &.affix {
+    &.affix, &.permanent-white {
       background-color: white;
       border-color: rgba(34, 34, 34, 0.1);
       .navbar-header .navbar-brand {
@@ -290,6 +290,9 @@ section {
       }
     }
   }
+  &.cta-back {
+      background-image: url('../img/bg-cta-new.jpg');
+  }
   &.cta {
     position: relative;
     -webkit-background-size: cover;
@@ -297,7 +300,6 @@ section {
     background-size: cover;
     -o-background-size: cover;
     background-position: center;
-    background-image: url('../img/bg-cta-new.jpg');
     padding: 100px 0;
     .cta-content {
       position: relative;
@@ -715,7 +717,7 @@ table {
 
 @media only screen and (max-width: 768px) {
     section {
-        &.cta {
+        &.cta-back {
             background-image: url('../img/bg-cta-mobile-new.jpg');
             height: 200px;
         }
