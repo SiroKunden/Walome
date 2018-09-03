@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top">
+    
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v2.9&appId=1204875242964478";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+  {% include nav.html %}
+  {% include aside-walomecon.html %}
+  {% include call-to-action-walomecon.html %}
+  {% include services-walomecon.html %}
+  {% include portfolio-walomecon.html %}
+  {% include quote-walomecon.html %}
+  {% include contact.html %}
+  {% include scripts.html %}
+</body>
+
+</html>

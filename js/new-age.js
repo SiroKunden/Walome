@@ -55,6 +55,28 @@ var playlistId = "PL_phu8k3RmzR8p1VmgZLoY1FJ4igmCrqg";
         
         downloadSourceOfHtml("https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=" + playlistId + "&key=AIzaSyDuPBD7duBdgYcHEkLTWH1bIhoYrH3fvQU", t);
         
+        var url = "https://docs.google.com/spreadsheets/pub?key=1L2tnkb1k9O-WzvEbPvfVACXrAgkkU8kTqW2_FNULq30&output=html";
+        var googleSpreadsheet = new GoogleSpreadsheet();
+        googleSpreadsheet.url(url);
+        googleSpreadsheet.load(function(result) {
+
+            for(var i = 0; i < result.items.length; i++) {
+
+                var item = result.items[i];
+
+                var new_item = $(".template").clone();
+                new_item.removeClass("template");
+                new_item.removeClass("hidden");
+                new_item.find(".date").text(item.cas);
+                new_item.find(".post-title").text(item.nadpis);
+                new_item.find(".description").text(item.popis);
+
+                $(".news").append(new_item);
+
+            }
+
+        });
+        
     });
     
 })(jQuery); // End of use strict
