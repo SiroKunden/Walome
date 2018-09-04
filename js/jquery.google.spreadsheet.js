@@ -94,7 +94,7 @@ var GoogleSpreadsheet = (function($) {
         var item = { 'id' : titleCell};
         for (var i = 0; i < n.length; i++){
           var aData = n[i].split(': ');
-          item[aData[0]] = $.trim(aData[1].replace(/<comma>/g, ","));
+          item[aData[0]] = typeof(aData[1]) !== "undefined" ? $.trim(aData[1].replace(/<comma>/g, ",")) : "";
         }
         _results.items.push(item);
       }
