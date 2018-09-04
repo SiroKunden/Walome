@@ -789,7 +789,7 @@ table {
 }
 
 .box-item {
-    -ms-flex: 1 0 300px;
+    -ms-flex: 1 0 0;
     -webkit-box-flex: 1;
     flex: 1 0 300px;
     margin: 0 0 1.875rem;
@@ -799,6 +799,7 @@ table {
     transition: all .3s;
     position: relative;
     z-index: 1;
+    max-width: 340px !important;
 }
 
 @media only screen and (min-width: 37.5rem) {
@@ -863,7 +864,7 @@ table {
     font-family: 'Titillium Web','Helvetica Neue',Helvetica,sans-serif;
     font-weight: 800;
     font-style: normal;
-    line-height: 1.875rem;
+    line-height: 2.5rem;
 }
 
 .box-item .box-body p {
