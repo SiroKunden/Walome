@@ -70,6 +70,7 @@ var playlistId = "PL_phu8k3RmzR8p1VmgZLoY1FJ4igmCrqg";
                 new_item.find(".date").text(item.cas);
                 new_item.find(".post-title").text(item.nadpis);
                 new_item.find(".description").text(item.popis);
+                new_item.find(".cover").find("div").attr("style", "background-image: url('" + item.id + "'); background-size: cover; height: 250px; background-repeat: no-repeat; background-position: center center;");
 
                 $(".news").append(new_item);
 
