@@ -7,8 +7,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization lea
 url: "http://walome.cz" # the base hostname & protocol for your site
 
 #rewrite
-rewrite: /
-#rewrite: /Walome/
+#rewrite: /
+rewrite: /Walome/
 
 google_analytics: 
 addthis_id: 
